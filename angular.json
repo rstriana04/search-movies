@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "search-movies"
+    }
+  },
+  "defaultProject": "search-movies",
+  "cli": {
+    "analytics": "81d0954a-469a-42df-b9a9-7c501122af07"
+  }
 }
