@@ -1,0 +1,25 @@
+<div class="container" *ngIf="detailMovie$ | async as detailMovie">
+  <h2 mat-dialog-title>{{detailMovie.Title}} - {{detailMovie.Genre}} - {{detailMovie.Year}}, {{detailMovie.Type}}</h2>
+  <mat-dialog-content>
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+        <img class="h-56 w-56 rounded mx-auto" [src]="detailMovie.Poster" alt="Poster">
+      </div>
+      <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+        <ul class="text-md">
+          <li><strong>Director: </strong> {{detailMovie.Director}}</li>
+          <li><strong>Fecha:</strong> {{detailMovie.Released}}</li>
+          <li><strong>Actores:</strong> {{detailMovie.Actors}}</li>
+          <li><strong>Trama:</strong> {{detailMovie.Plot}}</li>
+          <li><strong>Duración: </strong> {{detailMovie.Runtime}}</li>
+          <li><strong>Escritor: </strong> {{detailMovie.Writer}}</li>
+          <li><strong>Rating: </strong> {{detailMovie.imdbRating}}</li>
+          <li><strong>Premios: </strong> {{detailMovie.Awards}}</li>
+        </ul>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </mat-dialog-actions>
+</div>
